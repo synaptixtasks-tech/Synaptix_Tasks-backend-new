@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "synaptix-tasks-backend",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-10",
+  "vars": {
+    "ALGORITHM": "HS256",
+    "ACCESS_TOKEN_EXPIRE_MINUTES": "30"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "synaptix_tasks",
+      "database_id": "a6b8608a-b46c-47a9-b92e-78d63ada1284",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}
